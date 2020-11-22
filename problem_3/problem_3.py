@@ -20,6 +20,9 @@ def sieve_of_eratosthenes(s):
             arr[i] = None
     return [a for a in arr if a]
 
+print(prime_factor(13195))
+print(prime_factor(600851475143))
+
 # Getting a recursion depth error
 def sieve_recursive(s):
     arr = list(range(2, s))
@@ -38,6 +41,3 @@ def sieve_recursive(s):
             iterate(arr, next_prime)
     iterate(arr, next_prime)
     return [a for a in arr if a]
-
-print(prime_factor(13195))
-print(prime_factor(600851475143))
