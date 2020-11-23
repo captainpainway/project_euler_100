@@ -1,3 +1,21 @@
+// From the project Euler overview - much faster
+const faster_prime_factor = n => {
+    let factor = 2,
+        last_factor = 1;
+    while (n > 1) {
+        if (n % factor === 0) {
+            last_factor = factor;
+            n = n / factor;
+        } else {
+            factor++;
+        }
+    }
+    return last_factor;
+}
+
+console.log(faster_prime_factor(13195));
+console.log(faster_prime_factor(600851475143));
+
 const largest_prime_factor = n => {
     return sieve_of_eratosthenes(Math.ceil(Math.sqrt(n) / 2))
         .reverse()
@@ -5,6 +23,8 @@ const largest_prime_factor = n => {
 }
 
 // Using an object is much faster
+// https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes
+// In mathematics, the sieve of Eratosthenes is an ancient algorithm for finding all prime numbers up to any given limit.
 const sieve_of_eratosthenes = sq => {
     let arr = [...Array(sq).keys()].slice(2);
     let idx = 0;
@@ -23,7 +43,11 @@ const sieve_of_eratosthenes = sq => {
     return arr;
 }
 
+// console.log(largest_prime_factor(13195));
+// console.log(largest_prime_factor(600851475143));
+
 // This takes forever
+// It was finding all the primes up to the given number, then removing non-primes from the array.
 const old_sieve = sq => {
     let arr = [...Array(sq).keys()].slice(2);
     let idx = 0;
@@ -37,6 +61,3 @@ const old_sieve = sq => {
     }
     return arr.filter(x => x);
 }
-
-console.log(largest_prime_factor(13195));
-console.log(largest_prime_factor(600851475143));
