@@ -23,6 +23,8 @@ def prime_factor(n):
 
 # https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes
 # In mathematics, the sieve of Eratosthenes is an ancient algorithm for finding all prime numbers up to any given limit.
+# My original approach was to find all primes up to the target number, then filter out non-primes.
+# This is not nearly as efficient as the mathematical way, but learning how to generate prime numbers was interesting.
 def sieve_of_eratosthenes(s):
     arr = list(range(2, s))
     next_prime = 0
