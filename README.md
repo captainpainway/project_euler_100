@@ -2,7 +2,7 @@
 
 I'm trying to solve as many Project Euler questions as I can in as many languages as I can in order to gain a deeper understanding of each language, data structures, and algorithms.
 
-As FreeCodeCamp says, Project Euler is ["the Dark Souls of coding achievements](https://www.freecodecamp.org/news/projecteuler100-coding-challenge-competitive-programming/).
+As FreeCodeCamp says, Project Euler is ["the Dark Souls of coding achievements"](https://www.freecodecamp.org/news/projecteuler100-coding-challenge-competitive-programming/).
 
 Languages being used (in general order) are:
 * Python - I'm mostly proficient in Python, not an expert, needing to look things up sometimes.
