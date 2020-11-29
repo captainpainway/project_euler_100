@@ -1,6 +1,11 @@
 import itertools
 
 # This takes a few seconds, but works.
+# Start with two already in the primes list.
+# As we count up by twos from three (twos can't be prime),
+# see if the number is divisible by any previous prime.
+# If not divisible, it is prime, and add it to the list of primes.
+# Also increment the index so we can return just the 10,001st prime (at index 10000).
 def count_sieve(idx):
     primes = [2]
     i = 1

@@ -1,3 +1,9 @@
+# While working on problem 8, found out that "string"[::-1] will reverse the string.
+# The third parameter of an array slice is a step, so it steps backward by one.
+def find_palindrome_2(n):
+    rev = int(str(n)[::-1])
+    return n == rev
+
 def find_palindrome(n):
     rev = int(''.join(map(lambda x: x ,reversed(list(str(n))))))
     return n == rev
@@ -10,7 +16,7 @@ def largest_palindrome_faster():
         if (max * max2 < largest_palindrome):
             break
         while max2 > 100:
-            if find_palindrome(max * max2) and (max * max2 > largest_palindrome):
+            if find_palindrome_2(max * max2) and (max * max2 > largest_palindrome):
                 largest_palindrome = max * max2
             max2 -= 1
         max -= 1

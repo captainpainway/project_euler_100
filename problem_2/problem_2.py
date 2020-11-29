@@ -1,3 +1,6 @@
+# Creating the Fibonacci sequence,
+# but only appending the even numbers to the array
+# and then sum the array.
 def fib(n):
     a = 1
     b = 2
@@ -12,6 +15,8 @@ def fib(n):
 
 print(fib(4000000))
 
+# Using one array and negative indices to add the last two values.
+# Then, filter the array for multiples of two and sum.
 def fib2(n):
     arr = [1, 2]
     while True:
@@ -22,7 +27,8 @@ def fib2(n):
 
 print(fib2(4000000))
 
-# Only adding every third number, which is even
+# Only adding every third number, which is even.
+# Requires no additional array.
 def fib3(n):
     acc = 0
     a = 1

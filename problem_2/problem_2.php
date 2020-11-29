@@ -1,5 +1,12 @@
 <?php
 
+/**
+ * @param $n
+ * @return float|int
+ *
+ * Using the PHP array pointer functions end() and prev() to add the last two numbers
+ * of the Fibonacci sequence together. Then, filtering for even numbers and getting the sum.
+ */
 function fib($n) {
     $arr = [1, 2];
     while (end($arr) < $n) {
